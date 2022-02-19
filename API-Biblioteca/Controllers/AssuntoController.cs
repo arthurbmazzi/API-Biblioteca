@@ -12,15 +12,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace APIBiblioteca.API
+namespace APIBiblioteca
 {
     [Route("api/assuntos")]
     public class AssuntoController : ControllerBase
     {
-        private readonly DevCarsDbContext _dbContext;
+        private readonly APIDbContext _dbContext;
         private readonly string _connectionString;
 
-        public AssuntoController(DevCarsDbContext dbContext, IConfiguration configuration)
+        public AssuntoController(APIDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");

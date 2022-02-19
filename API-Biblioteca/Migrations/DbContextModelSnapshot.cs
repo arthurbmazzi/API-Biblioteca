@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API_Biblioteca.Migrations
 {
-    [DbContext(typeof(DevCarsDbContext))]
-    partial class DevCarsDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DevCars.API.Persistence.APIDbContext))]
+    partial class DbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

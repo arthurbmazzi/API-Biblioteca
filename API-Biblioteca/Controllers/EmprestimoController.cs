@@ -1,9 +1,9 @@
-﻿using DevCars.API.Entities;
+﻿using Microsoft.Data.SqlClient;
+using DevCars.API.Entities;
 using DevCars.API.InputModels;
 using DevCars.API.Persistence;
 using DevCars.API.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System;
 using Dapper;
@@ -12,16 +12,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace DevCars.API.Controllers
+namespace APIBiblioteca
 {
     [Route("api/emprestimo")]
 
     public class EmprestimoController : ControllerBase
     {
-        private readonly DevCarsDbContext _dbContext;
+        private readonly APIDbContext _dbContext;
         private readonly string _connectionString;
 
-        public EmprestimoController(DevCarsDbContext dbContext, IConfiguration configuration)
+        public EmprestimoController(APIDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");

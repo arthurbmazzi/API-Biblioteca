@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DevCars.API": {
+    "API-Biblioteca": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

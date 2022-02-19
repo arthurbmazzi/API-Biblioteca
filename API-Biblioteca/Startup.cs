@@ -31,13 +31,13 @@ namespace DevCars.API
         {
             var connectionString = Configuration.GetConnectionString("BibliotecaCs");
                 
-            services.AddDbContext<DevCarsDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
-                    Title = "DevCars.API", 
+                    Title = "API.Biblioteca", 
                     Version = "v1",
                     Contact = new OpenApiContact
                     {
@@ -59,7 +59,7 @@ namespace DevCars.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DevCars.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API.Biblioteca v1"));
             }
 
             app.UseHttpsRedirection();

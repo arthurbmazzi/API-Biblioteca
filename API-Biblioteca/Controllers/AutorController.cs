@@ -11,15 +11,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-namespace DevCars.API.Controllers
+
+namespace APIBiblioteca
 {
     [Route("api/autor")]
     public class AutorController : ControllerBase
     {
-        private readonly DevCarsDbContext _dbContext;
+        private readonly APIDbContext _dbContext;
         private readonly string _connectionString;
 
-        public AutorController(DevCarsDbContext dbContext, IConfiguration configuration)
+        public AutorController(APIDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");

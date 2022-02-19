@@ -12,15 +12,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace DevCars.API.Controllers
+namespace APIBiblioteca
 {
     [Route("api/multa")]
     public class MultaController : ControllerBase
     {
-        private readonly DevCarsDbContext _dbContext;
+        private readonly APIDbContext _dbContext;
         private readonly string _connectionString;
 
-        public MultaController(DevCarsDbContext dbContext, IConfiguration configuration)
+        public MultaController(APIDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");
@@ -56,7 +56,7 @@ namespace DevCars.API.Controllers
             var DetailsViewModel = new MultaViewModel(
                 entity.CodMultaProp,
                 entity.CodEmprestimo,
-                entity.Valor, 
+                entity.Valor,
                 entity.IdUsuarioMulta
                 );
 
