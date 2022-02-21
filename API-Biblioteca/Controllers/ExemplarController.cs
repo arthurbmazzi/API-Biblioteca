@@ -89,7 +89,7 @@ namespace DevCars.API.Controllers
 
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
-                var query = "DELETE FROM Exemplar WHERE Id = @id";
+                var query = "DELETE FROM Exemplar WHERE IdExemplar = @id";
 
                 sqlConnection.Execute(query, new { id = entity.IdExemplar });
             }

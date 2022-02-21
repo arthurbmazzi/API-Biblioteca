@@ -99,7 +99,7 @@ namespace DevCars.API.Controllers
 
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
-                var query = "DELETE FROM Pedido_Emprestimo WHERE Id = @id";
+                var query = "DELETE FROM Pedido_Emprestimo WHERE CodObra = @id";
 
                 sqlConnection.Execute(query, new { id = entity.CodObra });
             }

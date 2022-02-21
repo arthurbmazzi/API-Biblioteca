@@ -106,7 +106,7 @@ namespace DevCars.API.Controllers
 
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
-                var query = "DELETE FROM Obra WHERE Id = @id";
+                var query = "DELETE FROM Obra WHERE CodigoObraProp = @id";
 
                 sqlConnection.Execute(query, new { id = entity.CodigoObraProp });
             }

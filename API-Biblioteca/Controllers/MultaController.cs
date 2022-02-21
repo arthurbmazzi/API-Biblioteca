@@ -91,7 +91,7 @@ namespace DevCars.API.Controllers
 
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
-                var query = "DELETE FROM Multa WHERE Id = @id";
+                var query = "DELETE FROM Multa WHERE CodMultaProp = @id";
 
                 sqlConnection.Execute(query, new { id = entity.CodMultaProp });
             }

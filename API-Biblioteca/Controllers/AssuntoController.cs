@@ -89,7 +89,7 @@ namespace APIBiblioteca.API
 
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
-                var query = "DELETE FROM Assuntos WHERE Id = @id";
+                var query = "DELETE FROM Assuntos WHERE IdAssunto = @id";
 
                 sqlConnection.Execute(query, new { id = assunto.IdAssunto });
             }
