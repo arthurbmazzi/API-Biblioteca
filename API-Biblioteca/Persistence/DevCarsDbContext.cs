@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DevCars.API.Persistence
 {
-    public class APIDbContext : DbContext
+    public class DevCarsDbContext : DbContext
     {
-        public APIDbContext(DbContextOptions<APIDbContext> options) : base(options)
+        public DevCarsDbContext(DbContextOptions<DevCarsDbContext> options) : base(options)
         {
            
         }

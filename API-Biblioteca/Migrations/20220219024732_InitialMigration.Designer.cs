@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API_Biblioteca.Migrations
 {
-    [DbContext(typeof(DevCars.API.Persistence.APIDbContext))]
+    [DbContext(typeof(DevCarsDbContext))]
     [Migration("20220219024732_InitialMigration")]
     partial class InitialMigration
     {

@@ -12,15 +12,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace APIBiblioteca
+namespace DevCars.API.Controllers
 {
     [Route("api/pedidoEmprestimo")]
     public class PedidoEmprestimoController : ControllerBase
     {
-        private readonly APIDbContext _dbContext;
+        private readonly DevCarsDbContext _dbContext;
         private readonly string _connectionString;
 
-        public PedidoEmprestimoController(APIDbContext dbContext, IConfiguration configuration)
+        public PedidoEmprestimoController(DevCarsDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");

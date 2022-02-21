@@ -13,15 +13,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
 
-namespace APIBiblioteca
+namespace DevCars.API.Controllers
 {
     [Route("api/obra")]
     public class ObraController : ControllerBase
     {
-        private readonly APIDbContext _dbContext;
+        private readonly DevCarsDbContext _dbContext;
         private readonly string _connectionString;
 
-        public ObraController(APIDbContext dbContext, IConfiguration configuration)
+        public ObraController(DevCarsDbContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
             _connectionString = configuration.GetConnectionString("BibliotecaCs");
